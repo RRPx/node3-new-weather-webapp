@@ -67,7 +67,7 @@ app.get('/weather', (req, res) => {
                 })
             }
             res.send({
-            forecast: `The temperature will be ${temp}°C, wind speed at ${wind} km/h. #`${message}`,
+            forecast: `The temperature will be ${temp}°C, wind speed at ${wind} km/h. #${message}`,
             location: req.query.address
     })
 })
