@@ -11,7 +11,8 @@ const foreCast = (lat, lon, callback) => {
         } else {
             callback(undefined, {
                 temp: body.main.temp,
-                wind: body.wind.speed
+                wind: body.wind.speed,
+                message: 'Have a nice day ahead'
             })
         }
     })

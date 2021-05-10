@@ -60,14 +60,14 @@ app.get('/weather', (req, res) => {
             })
         }
     
-        foreCast(lat, lon, (error, { temp, wind }) => {
+        foreCast(lat, lon, (error, { temp, wind, message }) => {
             if (error) {
                 return res.send({
                     error: 'ForeCast failed to operate'
                 })
             }
             res.send({
-            forecast: `The temperature will be ${temp}°C, wind speed at ${wind} km/h`,
+            forecast: `The temperature will be ${temp}°C, wind speed at ${wind} km/h. #`${message}`,
             location: req.query.address
     })
 })
